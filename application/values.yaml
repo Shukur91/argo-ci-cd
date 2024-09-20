@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: us-central1-docker.pkg.dev/superb-beach-433818-k0/apr-project/artemis
+  repository: us-central1-docker.pkg.dev/superb-beach-433818-k0/apr-project
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "2.0.0"
@@ -56,7 +56,7 @@ ingress:
       paths:
         - path: /
           pathType: ImplementationSpecific
-  tls: []
+  tls: 
    - secretName: dev-artemis-tls
      hosts:
        - dev-artemis.shuktech.com
