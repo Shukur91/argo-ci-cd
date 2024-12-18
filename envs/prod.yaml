@@ -8,7 +8,7 @@ image:
   repository: us-central1-docker.pkg.dev/superb-beach-433818-k0/apr-project/artemis
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "2.0.0"
+  tag: "1.0.0"
 
 
 imagePullSecrets: []
@@ -53,14 +53,14 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: "true"
   hosts:
-    - host: dev-artemis.shuktech.com
+    - host: artemis.shuktech.com
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls: 
-   - secretName: dev-artemis-tls
+   - secretName: artemis-tls
      hosts:
-       - dev-artemis.shuktech.com
+       - artemis.shuktech.com
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
